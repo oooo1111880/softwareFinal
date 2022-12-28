@@ -1,39 +1,271 @@
-<p align="center">
-                    <table style="WIDTH: 100%">
-                      <tbody>
-                        <tr>
-                          <td style="WIDTH: 25%"></td>
-                          <td>
-                            <span id="Label1" class="si11rb">請於下方輸入您想推薦的書名或ISBN</span></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <span id="Label10" class="si11b">檢索值：</span>
-                    <select name="DropDownList1" id="DropDownList1" onchange="ddlchoice('請於下方輸入您想推薦的%1','請於下方輸入您想推薦的書名或ISBN');">
-	<option value="0">書名</option>
-	<option value="1">作者</option>
-	<option value="2">出版社</option>
-	<option value="3">ISBN</option>
-
-</select>
-                    <input name="TextBox1" type="text" maxlength="200" id="TextBox1" onkeydown="javascript:doEnterKey('Button2');">
+<html><head></head><body><div class="col-sm-4">
+              <div id="blk-login">
+                <div class="warning">
+                  
+                </div><!-- .warning -->
+                <h3>
+                  <span id="Label3">推薦者登入 Login</span>
+                </h3><!-- .form-group -->
+                <div class="form-group">
                     
-                    <span id="Label12"><font class="si9o">(輸入檢索值後,點選[開始推薦],可幫您帶回推薦資料)</font></span><br>
-                    <span style="COLOR: gray" id="psub" name="psub"></span><span id="lblIeUrl" style="DISPLAY: none">lblIeUrl</span>
-                    <table style="WIDTH: 100%">
-                      <tbody>
-                        <tr>
-                          <td style="WIDTH: 30%"></td>
-                          <td>
-                            <input type="submit" name="Button2" value="開始推薦" onclick="javascript:document.getElementById(&quot;txttips&quot;).innerText=&quot;查詢準備中...&quot;;if (typeof(Page_ClientValidate) == 'function') Page_ClientValidate(); " language="javascript" id="Button2">
-                            <span id="Label2">或</span>
-                            
-<span id="hlAcce1" name="hlAcce1"><a id="UserControl3_HyperLink1" class="sty5a" onclick="javascript:subm1('utf-8');" href="javascript:void(0);">.查看本館館藏.</a>
-</span>
+                    
+                </div><!-- .form-group -->
+                <div class="form-group">
+                  
+                  <br>
+                  
+                </div><!-- .form-group -->
+                <div class="btns">
+                   
+                  
+                  <input type="button" id="Button1" value="NID登入" onclick="javascript:window.open('http://opendata.fcu.edu.tw/fcuOauth/Auth.aspx?client_id=637102957247.e9976f5b722a47a6af9beddfeadb70e4.recommend.lib.fcu.edu.tw&amp;client_url=http://recommend.lib.fcu.edu.tw/weblink/scripts/weblink/oauth.aspx', '_top', 'copyhistory=0');" class="btn btn-default">
+                  
+                  
+                </div><!-- .btns -->
+                <div class="help">
+                  <h4>如何登錄系統</h4>
+                  <ul>
+                    <li>帳號：請輸入教職員/學生證號。</li>
+                    <li>密碼：請輸入NID密碼。(忘記密碼請聯絡資訊處分機2712)</li>
+                    <li>薦購服務相關問題請洽圖書館讀者服務組2682。</li>
+                  </ul>
+                </div><!-- .help -->
+              </div><!-- #blk-login -->
+              
+            </div>
+<style type="text/css">
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+  font-family: 敺株��迤暺煾��, Verdana;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*** end of css reset ***/
 
-</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </p>
+.container {
+  width: 960px;
+  margin: 0 auto;
+  text-align: left;
+}
+.crb {
+  clear: both;
+}
+.hide {
+  display: none;
+}
+
+body {
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+  background: #ededed;
+}
+#wrapper {
+  width: 100%;
+  text-align: center;
+}
+#header-inner {
+  height: 75px;
+  margin: 0;
+  background: url('cssimg/bg_header.png') center 24px no-repeat;
+}
+#header h1 {
+  display: none;
+}
+#fcul-logo {
+  display: inline-block;
+  width: 56px;
+  height: 64px;
+  background: #a00000 url('cssimg/fcul_logo.png') center center no-repeat;
+  margin-left: 10px
+}
+#fcul-logo span {
+  display: none;
+}
+#top-nav {
+  padding: 0;
+  background: #ffffff;
+  border-bottom: 1px solid #a00000;
+}
+#top-nav .navbar-form {
+  padding: 7px 15px;
+  border: 0px !important;
+}
+#top-nav  div {
+  display: table;
+  margin: 0;
+  padding: 0;
+}
+#top-nav .container {
+  margin: 0 auto;
+}
+#top-nav .header {
+  float: left;
+}
+#top-nav #corner-nav {
+  float: right;
+}
+#footer {
+  color: #999999;
+  margin-top: 15px;
+  padding: 5px 0 15px 230px;
+  background: url('cssimg/fcu_logos.png') left top no-repeat;
+  line-height: 150%;
+}
+#main-wrapper {
+  padding: 30px 15px;
+  background: #ffffff;
+  border: 1px solid #cccccc !important;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.col-sm-8 {
+  width: 584px;
+  float: left;
+  padding: 0px 15px;
+}
+.col-sm-4 {
+  width: 284px;
+  float: left;
+  padding: 0px 15px;
+}
+#main-wrapper ul, #main-wrapper ol {
+  list-style-type: square;
+  list-style-image: url('ico-li-square.png');
+  line-height: 2.5em;
+  margin-top: 15px;
+  margin-left: 2.2em;
+  margin-bottom: 3em !important;
+}
+#main-wrapper h3 {
+  font-size: 150%;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+#blk-system-literals, #blk-help, #blk-board {
+  line-height: 150%;
+}
+#blk-help p, #blk-help ul, #blk-help ol, #blk-help table,
+#blk-board p, #blk-board ul, #blk-board ol, #blk-board table {
+  margin-bottom: 1.5em;
+}
+#blk-login {
+  color: #ffffff;
+  padding: 15px;
+  background: #00b9cf;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+#blk-login h3 {
+  margin: 10px 0 15px;
+}
+#blk-login a {
+  color: #004eaf;
+}
+#Label1, #Label2, #lbltip {
+  display: block;
+  margin-bottom: 3px;
+}
+#blk-login .form-group {
+  margin-bottom: 5px;
+}
+#blk-login .form-group #u2 {
+  margin-bottom: 3px;
+}
+#u1, #u2 {
+  font-size: 120%;
+  width: 95% !important;
+  padding: 5px !important;
+}
+#blk-login .btns {
+  text-align: center;
+  margin-bottom: 30px;
+}
+#Button1, #Clear1 {
+  font-size: 120%;
+  padding: 3px 8px;
+}
+#blk-login h4 {
+  font-size: 120%;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+#blk-login ul {
+  margin-left: 0px;
+  padding-left: 1.5em;
+  list-style-type: square;
+  line-height: 150%;
+}
+#Table1 {
+  border-bottom: 1px solid #dddddd;
+  width: 100%;
+}
+#Table1 td {
+  line-height: 120%;
+}
+#Table1 td.date {
+  font-size: 75% !important;
+  color: #aaaaaa !important;
+  padding: 12px 8px 0px 8px !important;
+  border-top: 1px solid #dddddd;
+}
+#Table1 td.items {
+  padding: 5px 8px 12px 8px !important;
+}
+#Image2 {
+  display: none;
+}
+#WeblinkLanguage1 {
+  position: inherit;
+}
+#WeblinkLanguage1 select {
+  font-size: 120%;
+  margin-top: 12px;
+}
+    </style>
+            </body></html>
