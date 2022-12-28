@@ -31,14 +31,10 @@ class ViewTest(TestCase):
     def test_unit_home(self):
         """Tests the home page."""
         response = self.client.get('/')
-        self.assertContains(response, 'Home Page', 1, 200)
+        self.assertContains(response, 'SELab 關心您的身體健康', 1, 200, html=True)
 
-    def test_unit_contact(self):
-        """Tests the contact page."""
-        response = self.client.get('/contact')
-        self.assertContains(response, 'Contact', 3, 200)
-
-    def test_unit_about(self):
-        """Tests the about page."""
-        response = self.client.get('/about')
-        self.assertContains(response, 'About', 3, 200)
+    def test_unit_normal(self):
+        """Tests the home page."""
+        response = self.client.post('/', {'height':1.7,'weight':"60"})
+        self.assertContains(response, '20.76', 1, 200, html=True)
+    
