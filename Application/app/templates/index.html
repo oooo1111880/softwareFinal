@@ -2,42 +2,26 @@
 
 {% block content %}
 {% load staticfiles %}
-<div class="main-container">
-    <div class="cloud-image">
-        <img src="{% static "app/img/successCloudNew.svg" %}" />
-    </div>
-    <div class="content">
-        <div class="tweet-container">
-            <a href="http://twitter.com/intent/tweet/?text=I%20just%20created%20a%20new%20Python%20Django%20website%20on%20Azure%20using%20Github%20Actions&hashtags=GithubActions%20%40Azure">
-                <img src="{% static "app/img/tweetThis.svg" %}" />
-            </a>            
-        </div>
-        <div class="content-body">
-            <div class="success-text">Success!</div>
-            <div class="description line-1"> GitHub workflow has been successfully setup</div>
-            <div class="description line-2"> Your Python Django app is up and running on Azure</div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-4">
-        <h2>Get started right away </h2>
-        <p>
-            Clone your code repository and start developing your application on IDE of your choice
-        </p>
-        <p><a class="btn btn-default" href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Continuous Delivery</h2>
-        <p>Learn more about all you can do with Github Actions by visiting the documentation</p>
-        <p><a class="btn btn-default" href="https://docs.github.com/en/actions">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Github Repository</h2>
-        <p>Learn more about all you can do with Github by visiting the documentation</p>
-        <p><a class="btn btn-default" href="https://docs.github.com">Learn more &raquo;</a></p>
-    </div>
-</div>
+<div id="blk-board">
+                <!-- <img id="Image3" title="公佈欄" src="/weblink/images/newsTitle1.gif" alt="" border="0" /> -->
+                <h3>公布欄</h3>
+                <table id="Table1" class="table table-list" border="0">
+	<tbody><tr>
+		<td class="date">2020/11/16 8:19:39</td>
+	</tr><tr>
+		<td class="items" style="border-top: none;"><a onclick="javascript:window.open(&quot;/weblink/scripts/weblink/news.aspx?num=47&amp;displaylang=&quot;, &quot;_newsDetail&quot;, &quot;copyhistory=0,top=50,left=50,width=500,height=400,scrollbars=1&quot;);" href="javascript:void(0);">薦購系統E-mail自動通知功能暫停公告</a></td>
+	</tr><tr>
+		<td class="date">2020/3/17 16:28:33</td>
+	</tr><tr>
+		<td class="items" style="border-top: none;"><a onclick="javascript:window.open(&quot;/weblink/scripts/weblink/news.aspx?num=45&amp;displaylang=&quot;, &quot;_newsDetail&quot;, &quot;copyhistory=0,top=50,left=50,width=500,height=400,scrollbars=1&quot;);" href="javascript:void(0);">簡體書延遲到貨公告</a></td>
+	</tr><tr>
+		<td class="date">2020/3/17 16:23:6</td>
+	</tr><tr>
+		<td class="items" style="border-top: none;"><a onclick="javascript:window.open(&quot;/weblink/scripts/weblink/news.aspx?num=10&amp;displaylang=&quot;, &quot;_newsDetail&quot;, &quot;copyhistory=0,top=50,left=50,width=500,height=400,scrollbars=1&quot;);" href="javascript:void(0);">各類資源薦購額度與作業方式一覽表</a></td>
+	</tr>
+</tbody></table>
+                <div id="if2" name="if2" width="310" height="350"></div>
+                
+              </div>
 
 {% endblock %}
