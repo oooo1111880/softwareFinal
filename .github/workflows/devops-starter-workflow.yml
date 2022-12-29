@@ -12,6 +12,7 @@ env:
   LOCATION: "South Central US"
   HOSTINGPLANNAME: "softwareFinal-plan"
   APPINSIGHTLOCATION: "South Central US"
+  SONAR_HOST_URL: "http://localhost:9000"
   SKU: "S1 Standard"
 
 jobs:
@@ -39,7 +40,7 @@ jobs:
    #     pip install pycmd
    #     py.cleanup Tests/
    
-   # - uses: actions/checkout@v2
+   # - uses: actions/checkout@v3
    #   with:
    #     fetch-depth: 0
    # - uses: sonarsource/sonarqube-scan-action@master
